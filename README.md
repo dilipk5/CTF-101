@@ -11,3 +11,7 @@ This is my win board. Here I'll be sharing:
 💣 Binary Exploitation & Reverse Engineering notes.
 
 🧠 Tips & tricks I discover along the way.
+
+
+**Why this repo?**  
+To track my growth, share my learning openly, and build a strong hacking foundation.
