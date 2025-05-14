@@ -39,3 +39,9 @@ After getting the cert and the key we can log-in
 ```
 evil-winrm -i IP -S -k key.pem -c cert.pem
 ```
+
+## Windows Credentail Hunting - Member of LAPS Group
+LAPS is used to store administrator passwords which are complex and randomized, We can use a lapsdumper from github to extract the administrator password
+```
+lapsdumper.py -u user -p password -d domain.local
+```
