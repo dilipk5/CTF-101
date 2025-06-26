@@ -45,3 +45,27 @@ LAPS is used to store administrator passwords which are complex and randomized, 
 ```
 lapsdumper.py -u user -p password -d domain.local
 ```
+
+## Linux Privilege escalation - ENV variables
+Alwyas check for env varibles specially if landed in a docker environment, or any container.
+```
+env
+```
+
+## Linux Privilege escalation - Backup Files
+Check for backup files if have permissions in the source code directory or part of any group like sysadm, adm(4)
+```
+find /path/to/source/code 2>/dev/null | grep -i "*.bak"
+```
+
+## Port forwarding Using ssh
+If we have a user with ssh creds or public key(id_rsa) we can login and start a local port forwarding, which will forward the ports of the machine to out local machine and we will be able to view the service running on the machine in their internal nertwork
+```
+ssh -L machineport:ourmachineip:ourmachineport user@machine.local
+```
+
+## Exploiatation - Extract username from a public ssh key (id_rsa)
+If we got a users id_rsa ssh key and we dont know the user which the public key is of, we can extract the username from the key by decrypting the keys and reading the hex dump, at the very end we can find the user and the machine which the key belongs to.
+```
+cat id_rsa | base64 -d | xxd
+```
