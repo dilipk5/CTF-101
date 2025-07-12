@@ -2,6 +2,9 @@
 
 This is my win board. Here I'll be sharing:
 
+
+Some shorcuts and automation i use
+
 ✅ Writeups for HTB boxes which I solved without using any writeups.
 
 📚 What I learned from each box (tools, techniques, new tricks).
