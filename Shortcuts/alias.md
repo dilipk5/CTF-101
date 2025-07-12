@@ -11,7 +11,7 @@ alias lpi='cp /usr/share/peass/linpeas/linpeas.sh .'
 
 alias wpi='cp /usr/share/peass/winpeas/winPEASx64.exe .'
 
-alias wpip='cp /usr/share/peass/winpeas/winPEAS.ps1'
+alias wpip='cp /usr/share/peass/winpeas/winPEAS.ps1 .'
 
 alias dfuzz='bash /opt/scripts/ffufs/dfuzz'
 
