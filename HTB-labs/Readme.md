@@ -77,7 +77,7 @@ Attacker machine(kali linux)
 ```
 sudo ip tuntap add user <user> mode tun ligolo
 sudo ip link set ligolo up
-sudo ip route del 192.168.2.0/24 dev ligolo
+sudo ip route add 192.168.2.0/24 dev ligolo
 ```
 ```
 ./proxy --selfcert 
