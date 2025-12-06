@@ -6,13 +6,14 @@ http://15.206.47.5:9090/
 
 Going on the web page we get
 
-<img width="868" height="478" alt="image" src="https://github.com/user-attachments/assets/3ffd56dc-cc05-4afb-b131-dfb47d3106f9" />
+<img width="788" height="439" alt="image" src="https://github.com/user-attachments/assets/021bc1ce-0031-4ad4-8063-2047acbc1ecf" />
+
 
 
 
 This explains what we have to do, so lets start building a python script
 
-```json
+```bash
 #!/usr/bin/env python3
 
 import requests
@@ -94,7 +95,8 @@ This was simple
 3. Reverse the string and then base64 encoded and made the payload.
 4. Sending the answer to /submit which returns the flag.
 
-<img width="1215" height="321" alt="image" src="https://github.com/user-attachments/assets/93cd5af3-42ff-4b56-87d0-cd762f22f6fc" />
+<img width="1098" height="285" alt="image" src="https://github.com/user-attachments/assets/53da25b8-9c64-498b-946b-dbace1e7f4f5" />
+
 
 
 
